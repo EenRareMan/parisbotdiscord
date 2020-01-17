@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     // var roleID = message.guild.roleId;
 
     var role = message.guild.roles.find(r => r.name == "Support");
-    
+
 
     // Verkrijg Gebruikersnaam
     var userName = message.author.username;
@@ -70,7 +70,7 @@ module.exports.run = async (bot, message, args) => {
                 .setDescription("Zet hier je vraag/bericht");
 
             settedParent.send(embedParent);
-
+            
         }).catch(err => {
             message.channel.send("Er is iets fout gelopen.");
         });
@@ -80,8 +80,6 @@ module.exports.run = async (bot, message, args) => {
     });
 
 }
-
 module.exports.help = {
-    name: "new",
-    description: "Maak een ticket aan"
+    name: "new"
 }
